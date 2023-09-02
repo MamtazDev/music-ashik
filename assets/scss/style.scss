@@ -1,0 +1,562 @@
+/**
+ * @Main scss for (Template/Project Name)
+ * @project     - Music Website
+ * @author      - Ashiqur Rahman
+ * @created_by  - Ashiqur Rahman
+ * @created_at  - 
+ * @modified_by -
+ */
+
+/* fonts import */
+
+/* fonts import -END */
+
+/* reset, root */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* reset, root /-end */
+
+/* container resize /-start */
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 1440px) {
+    max-width: 1320px;
+  }
+}
+
+/* container resize /-end */
+
+/* main css start -START */
+// HEADER /-START
+header {
+
+  background: #212327;
+  box-shadow: 0px 8px 38px 6px rgba(187, 187, 187, 0.16);
+
+  .nav-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: space-between;
+
+    .nav-main {
+      gap: 38px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .navbar-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 45px;
+        align-items: center;
+
+        .nav-item {
+          .nav-link {
+            text-decoration: none;
+            color: #DCDADA;
+            font-size: 16px;
+            font-weight: 400;
+            transition: all linear 0.2s;
+
+            &:hover {
+              color: #F2E2C5;
+            }
+
+            &.active {
+              color: #F2E2C5;
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      form {
+        .form-control {
+          font-family: Poppins;
+          min-width: 326px;
+          width: 100%;
+          height: 56px;
+          padding-left: 55px;
+          padding-right: 10px;
+          border-radius: 8px;
+          background: #F5F5F5;
+          border: none;
+          color: #7A7A7A;
+          font-size: 16px;
+          font-weight: 400;
+
+          &:focus-visible {
+            outline: none;
+          }
+
+          &.search-icon {
+            background-image: url(../img/search-icon.svg);
+            background-repeat: no-repeat;
+            background-position: left 20px center;
+          }
+        }
+      }
+
+      .nav-notify-wrapper {
+        display: flex;
+        align-items: center;
+
+        .nav-notify-main {
+          display: flex;
+          gap: 20px;
+
+          .nav-notify-item {
+            position: relative;
+
+            .nav-notify-counter {
+              position: absolute;
+              top: -20px;
+              right: -15px;
+              background-color: red;
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              vertical-align: middle;
+              border-radius: 50%;
+
+              p {
+                font-size: 11px;
+                font-weight: 500;
+                color: #FFFFFF;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+// HEADER /-END
+
+// MY MUSIC /-START
+#my-music {
+  padding-top: 80px;
+  padding-bottom: 130px;
+
+  .title {
+    h1 {
+      color: #0F0609;
+      font-family: Poppins;
+      font-size: 32px;
+      font-weight: 600;
+      padding-bottom: 30px;
+    }
+  }
+
+  .my-music-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+
+    .my-music-left {
+      .input-group {
+        .common-input {
+          margin-bottom: 20px;
+
+          input {
+            color: #696969;
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 500;
+            height: 50px;
+            max-width: 648px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #D7D7D7;
+            background: #F9F9F9;
+
+            &:focus-visible {
+              outline: none;
+            }
+
+            &::placeholder {
+              color: #696969;
+              font-family: Poppins;
+              font-size: 16px;
+              font-weight: 500;
+            }
+
+            padding-left: 20px;
+          }
+        }
+
+        #submit {
+          button {
+            cursor: pointer;
+            max-width: 648px;
+            width: 100%;
+            padding: 20px 0;
+            border: 0;
+            border-radius: 8px;
+            background: #8E6147;
+            color: #F7E5CD;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .my-music-right-wrapper {
+      .my-music-right {
+        border-radius: 8px;
+        border: 1px solid #D7D7D7;
+        background: #F9F9F9;
+        padding: 30px;
+        margin-bottom: 10px;
+
+        textarea {
+          color: #696969;
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: 500;
+          border: 0;
+          outline: 0;
+          max-width: 648px;
+          width: 100%;
+          background: #F9F9F9;
+        }
+
+        .editable-item {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+
+          .editable-item-left {
+            display: flex;
+            gap: 20px;
+          }
+
+          .editable-item-right {
+            button {
+              cursor: pointer;
+              border-radius: 8px;
+              border: 1px solid #F7E5CD;
+              background: #F7E5CD;
+              padding: 14px 20px;
+              color: #202227;
+              font-family: Poppins;
+              font-size: 20px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .share {
+        .social-items-wrapper {
+          .social-item-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .social-item {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+              padding: 33px 55px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+// MY MUSIC /-END
+
+// TIMELINE /-START
+#timeline {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background-image: url(../img/timeline-background.png);
+  background-repeat: no-repeat;
+
+  .block {
+    z-index: 1;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: calc(96% + 3px);
+      width: 5px;
+      background-color: #D1D1D1;
+      left: 50%;
+      margin-top: 130px;
+    }
+  }
+
+  .title {
+    text-align: center;
+
+    p {
+      background-color: #202227;
+      display: inline-block;
+      color: #F7E5CD;
+      padding: 35px 80px;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 600;
+      border-radius: 8px;
+    }
+
+  }
+
+  .year-wrapper {
+    position: absolute;
+    top: 20px;
+    right: calc(25% + 5px);
+    transform: translate(50%);
+  }
+
+  .year-wrapper2 {
+    position: absolute;
+    top: 15px;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  .year-wrapper3 {
+    position: absolute;
+    top: 33px;
+    right: calc(23% + -5px);
+  }
+
+  .year-wrapper4 {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  .line {
+    position: absolute;
+    right: 41%;
+    bottom: 90px;
+    z-index: -9;
+  }
+
+  .event-one {
+    margin-left: -98%;
+    position: relative;
+
+    .line {
+      position: absolute;
+      top: 90px;
+      right: calc(28% + -19px);
+    }
+  }
+
+  .event-two {
+    position: relative;
+
+    .line {
+      position: absolute;
+      z-index: -9;
+    }
+  }
+
+  .event-three {
+    margin-left: -98%;
+    position: relative;
+
+    .line {
+      position: absolute;
+      right: calc(28% + -15px);
+      top: 100px;
+    }
+  }
+
+
+  .each-event {
+    background-color: #f4f4f4;
+    color: #777;
+    margin: 80px 20px;
+    width: 484px;
+    position: relative;
+    border-radius: 4px;
+
+    &:nth-child(odd) {
+      margin-left: calc(57% + 12px);
+
+      @media(max-width: 1230px) {
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      margin-left: 300px;
+
+      @media(max-width: 1230px) {
+        margin-left: 0;
+      }
+    }
+
+
+
+    .event-description-wrapper {
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #8E6147;
+      background: #EEE;
+
+      .event-description {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .event-left {
+          .top {
+            h4 {
+              color: #202227;
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            p {
+              color: #696969;
+              font-size: 16px;
+              font-weight: 400;
+            }
+
+            margin-bottom: 10px;
+
+          }
+
+          .bottom {
+            h4 {
+              color: #202227;
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            p {
+              color: #696969;
+              font-size: 16px;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .event-right {
+
+          h4 {
+            color: #202227;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: #696969;
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+
+        }
+      }
+
+      .event-function {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        gap: 10px;
+      }
+
+    }
+  }
+
+
+}
+
+// TIMELINE /-END
+
+
+footer {
+  background: #212327;
+  padding: 15px 0;
+
+  .footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .footer-right {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        li {
+          a {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .footer-left {
+      p {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+
+/* main css start - END */
